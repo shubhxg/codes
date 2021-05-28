@@ -1,1 +1,1 @@
-c,c++,python
+c,c++,python,html,css,js
