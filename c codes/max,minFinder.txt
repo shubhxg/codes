@@ -30,7 +30,7 @@ int main(){
     int Data[N];
     for(int K=0;K<N;K++){
         cin>>Data[K];
-    }
+    } 
 
     Max = maxFinder(N,Data);
     Min = minFinder(N,Data);
