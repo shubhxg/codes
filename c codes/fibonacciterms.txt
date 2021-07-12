@@ -15,7 +15,7 @@ void fibonacci(int num){
         t2 = nextTerm;
     }
 	return;
-}
+}  
 int main(){
 
     int num;
