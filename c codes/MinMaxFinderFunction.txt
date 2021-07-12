@@ -18,7 +18,6 @@ int minFinder(int N, int Data[]){
     return Min;
 }
 int main(){
-
     int Max;
     int Min;
     int N;
@@ -28,7 +27,7 @@ int main(){
     for(int K=0;K<N;K++){
         cin>>Data[K];
     }
-
+    
     Max = maxFinder(N,Data);
     Min = minFinder(N,Data);
     cout<<"Max and Min Entries are : "<<Max<<", "<<Min;
