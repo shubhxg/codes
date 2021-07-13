@@ -24,8 +24,8 @@ int main(){
     cout<<"Enter number of entries : ";
     cin>>N;
     int Data[N];
-    for(int K=0;K<N;K++){
-        cin>>Data[K];
+    for(int i=0;i<N;i++){
+        cin>>Data[i];
     }
     
     Max = maxFinder(N,Data);
