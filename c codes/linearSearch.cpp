@@ -21,7 +21,6 @@ int main(){
         cin>>array[i];
     }
 
-
     int keyToSearch;
     cout<<"enter the key to search = ";
     cin>>keyToSearch;
