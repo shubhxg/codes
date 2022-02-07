@@ -4,8 +4,6 @@ import java.util.Scanner;
 //The enrollment has ended, and now the task is to count the number of desks to order the correct number from the shop. Of course, 
 //the university is short of money, so you need to calculate the minimum number of desks. But don't forget that each group will sit in its own classroom!
 
-import java.util.Scanner;
-
 class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
