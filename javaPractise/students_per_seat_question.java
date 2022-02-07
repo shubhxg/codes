@@ -4,18 +4,20 @@ import java.util.Scanner;
 //The enrollment has ended, and now the task is to count the number of desks to order the correct number from the shop. Of course, 
 //the university is short of money, so you need to calculate the minimum number of desks. But don't forget that each group will sit in its own classroom!
 
-class students_per_seat_question {
+import java.util.Scanner;
+
+class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         // put your code here
-        int a = scanner.nextInt();
-        int b = scanner.nextInt();
-        int c = scanner.nextInt();
-        float result = (float)(a+b+c)/2;
-        if(result%2==0){
-            System.out.println(result);
-        } else {
-            System.out.println(Math.round(result));
-        }
+        int firstGroup = scanner.nextInt();
+        int secondGroup= scanner.nextInt();
+        int thirdGroup = scanner.nextInt();
+        int result = 
+            (firstGroup % 2) + (firstGroup / 2) //% is used to get the remainder of 2 and then rest is only students which can sit on a desk.
+         +  (secondGroup % 2) + (secondGroup / 2)
+         +  (thirdGroup % 2) + (thirdGroup / 2);
+        System.out.println(result);
+        
     }
 }
