@@ -1,4 +1,5 @@
 import java.util.Scanner;
+//asked in jetbrain academy course.
 //A university has decided to open math courses and equip classrooms for 3 groups with new special desks. 
 //The faculty agreed that for the sake of productivity, only two students may share one desk. 
 //The enrollment has ended, and now the task is to count the number of desks to order the correct number from the shop. Of course, 
