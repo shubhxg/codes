@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class tictactoe {
+public class ProjectGameTictactoe {
     public static void main(String[] args) {
         // driver method
         char[][] gameBoard = {{' ', '|', ' ', '|', ' '},
