@@ -2,12 +2,14 @@ import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
+        
         // driver code
         initiliseGame();
     }
 
     public static void initiliseGame() {
-
+        
+        // game logic
         final String INTRO = "-------ROCK PAPER SCISSOR GAME-------";
         System.out.println(INTRO);
 
@@ -25,8 +27,8 @@ class Main {
                 break;
             }
 
-            if (!myMove.equals("rock") && !myMove.equals("paper") && !myMove.equals("scissor")
-                    && !myMove.equals("exit")) {
+            if (!myMove.equalsIgnoreCase("rock") && !myMove.equalsIgnoreCase("paper") && !myMove.equalsIgnoreCase("scissor")
+                    && !myMove.equalsIgnoreCase("exit")) {
                 System.out.println("Invalid move");
             } else {
 
@@ -44,11 +46,11 @@ class Main {
                 System.out.println("CPU move is : " + cpuMove);
 
                 // game logic
-                if (myMove.equals(cpuMove)) {
+                if (myMove.equalsIgnoreCase(cpuMove)) {
                     System.out.println("Tied!\n");
-                } else if ((myMove.equals("rock") && (cpuMove.equals("scissor"))) ||
-                        (myMove.equals("scissors") && cpuMove.equals("paper")) ||
-                        (myMove.equals("paper") && cpuMove.equals("rock"))) {
+                } else if ((myMove.equalsIgnoreCase("rock") && (cpuMove.equalsIgnoreCase("scissor"))) ||
+                        (myMove.equalsIgnoreCase("scissors") && cpuMove.equals("paper")) ||
+                        (myMove.equalsIgnoreCase("paper") && cpuMove.equalsIgnoreCase("rock"))) {
                     System.out.println("You won!\n");
                     ++wins;
                 } else {
