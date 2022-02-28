@@ -1,41 +1,48 @@
-// we did not create person object so this makes sence that constructor of person class wont be invoked.
-// this is why we will need to invoke person class via base class using super keyword.
+// When creating a subclass constructor, if you don't explicitly call a superclass constructor with super
+// , then Java will insert an implicit call to the no-arg "default" superclass constructor, i.e. super();
 
-public class Main {
+import java.util.Scanner;
+
+class Main {
 	public static void main(String[] args) {
+		displayMessage();
+		
+		Scanner scanner = new Scanner(System.in);
+		var l = scanner.nextFloat();
+		var b = scanner.nextFloat();
+
+		Rectangle objrec = new Rectangle(l, b);
+		objrec.displayArea();
+
+		Cuboid objcube = new Cuboid(l, b, 2);
+		System.out.println();
+		objcube.displayVolume();
+		scanner.close();
+	}
 	
-		Hero hero1 = new Hero("Batman",42,"Money");
-		
-		System.out.println(hero1.name);
-		System.out.println("is " + hero1.age + " years old!");
-		System.out.println(" and has power of " + hero1.power);
-		
-		}
+	static void displayMessage() {
+		System.out.println("Enter the l, b : ");
+	}
 }
 
-
-class Person {
-	String name;
-	int age;
-		
-	Person() { 
-		this.name = name;
-		this.age = age;
-		}
-
+class Rectangle {
+	double l, b;
+	Rectangle(float length, float width) {
+		this.l = length;
+		this.b = width;
+	}
+	void displayArea() {
+		System.out.println("Area of this object is " + (l * b));
+	}
 }
 
-class Hero extends Person {
-	String power;
-		
-	//this is constructor of base class and this will be invoked when Hero object is created.
-	Hero(String name, int age, String power) {
-
-		/*super will invoke the constructor of person class since person is a super class
-		this way we are actually invoking constructor of person class using super keyword.	
-		*/
-		super(name, age);  
-		}
-
-
+class Cuboid extends Rectangle {
+	double h;
+	Cuboid(float l, float b, float h) {
+		super(l, b); // explicitly calling super constructor 
+		this.h = h;
+	}
+	void displayVolume() {
+		System.out.println("Volume of this object is " + (l * b * h));
+	}
 }
