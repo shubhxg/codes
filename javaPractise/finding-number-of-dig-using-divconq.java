@@ -51,6 +51,26 @@ class Main {
                 }
             }
         }
-    
     }
 }
+
+// the other way of doing this is by taking the advantage of the fact that any number can be represented by the 
+// addition of powers of 2. For example, 15 can be represented as 8+4+2+1, which are all powers of 2.
+
+/* int length = 1;
+if (number >= 100000000) {
+    length += 8;
+    number /= 100000000;
+}
+if (number >= 10000) {
+    length += 4;
+    number /= 10000;
+}
+if (number >= 100) {
+    length += 2;
+    number /= 100;
+}
+if (number >= 10) {
+    length += 1;
+}
+return length; */
