@@ -1,7 +1,7 @@
 /* 
 Array reversal using temporary variable
 this method is 40ms faster than the Collections.FunctionName(Arrays.aslist()) which means this one is more efficient for big data.
-average time - 210ms 
+average time - 120ms
 */
 
 public class Main{
