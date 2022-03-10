@@ -1,7 +1,7 @@
 /*
 Array revesal using Collection.functionName(Arrays.asList(array))
 this method is less efficient but smaller code
-average time taken - 260ms
+average time taken - 150ms
 */
 
 import java.util.*;
