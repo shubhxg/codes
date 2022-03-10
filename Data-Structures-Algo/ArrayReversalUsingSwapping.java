@@ -16,7 +16,7 @@ public class Main{
             temp = a[i];          //putting ith element in temp
             a[i] = a[n - i - 1]; //putting n-i-1 th element in ith position of array
             a[n - i - 1] = temp; // putting the temp value to n - i - 1 th element
-  
+	}
         // printing the reversed array
         System.out.println("Reversed array is: \n");
         for (int i = 0; i < n; i++) {
