@@ -17,16 +17,17 @@ public class Searchin2DArray {
 
     static int[] search(int[][] array, int target) {
 
-        // if array is empty return -1 in new array 
+        // if array is empty return -1 in a new array
         if(array.length == 0) return new int[]{-1};
 
+        // returning the positions of index in a new array
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 if(array[i][j] == target) return new int[]{i,j};
             }
             
         }
-        // if not found
+        // if not found return -1 in new array
         return new int[]{-1};
     }
 }
