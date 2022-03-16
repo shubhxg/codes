@@ -1,3 +1,5 @@
+// Block Class for creating single block of blockchain
+
 import java.util.Arrays;
 
 public class Block {
