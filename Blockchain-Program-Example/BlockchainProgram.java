@@ -1,23 +1,37 @@
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class BlockChainProgram {
     public static void main(String[] args) {
 
-        // demonstrate what is hash function
-        String statement = "Hello world!";
-        int hashvalue = statement.hashCode();
-        System.out.println("Statement = " + statement + ", and hash value is = " + hashvalue);
+        // initialiasing arraylist of Blocks called blockChain
+        ArrayList<Block> blockChain = new ArrayList<>();
 
-        // lets hash an array
-        String[] list1 = { "hello", "world" };
-        String[] list2 = { "hello", "world" };
-        int hash1 = Arrays.hashCode(list1);
-        int hash2 = Arrays.hashCode(list2);
+        // first block, blockHash = 1998290691, previousBlockHash = 0
+        String[] initialValues = { "Shubh has 100$ in account" };
+        Block firstBlock = new Block(initialValues, 0);
+        blockChain.add(firstBlock);
+        printBlockChain(firstBlock, blockChain);
 
-        System.out.println("hash1 = " + hash1 + " hash2 = " + hash2);
+        // second block, blockHash = -646975631, previousBlockHash = 1998290691
+        String[] shubhGivesMohan = { "Shubh gives Mohan 5$" };
+        Block secondBlock = new Block(shubhGivesMohan, firstBlock.getBlockHash());
+        blockChain.add(secondBlock);
+        printBlockChain(secondBlock, blockChain);
 
-        // demonstrate a series of blocks in chain
+        // third block, blockHash = 128858262 , previousBlockHash = -646975631
+        String[] mohanGivesShubhBack = { "Mohan gives back 5$" };
+        Block thirdBlock = new Block(mohanGivesShubhBack, secondBlock.getBlockHash());
+        blockChain.add(thirdBlock);
+        printBlockChain(thirdBlock, blockChain);
 
+    }
+
+    static void printBlockChain(Block block, ArrayList<Block> blockchain) {
+
+        // printing the block
+        System.out.println("Block : \n" + block.toString());
+        // printing the array of blocks ( blockchain )
+        System.out.println("Block Chain : \n" + blockchain.toString() + "\n");
     }
 
 }
