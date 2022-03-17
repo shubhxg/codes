@@ -1,5 +1,3 @@
-// Block Class for creating single block of blockchain
-
 import java.util.Arrays;
 
 public class Block {
@@ -11,17 +9,14 @@ public class Block {
         super();
         this.transactions = transactions;
         this.previousBlockHash = previousBlockHash;
-
-        // Combining (previous block hash and hash of this block's transaction) into new
-        // hash and assigning it to this blockHash
         this.blockHash = Arrays.hashCode(new int[] { Arrays.hashCode(transactions),
                 this.previousBlockHash });
     }
 
     @Override
     public String toString() {
-        return "Block [blockHash=" + blockHash + ", previousBlockHash=" + previousBlockHash + 
-            ", transactions=" + Arrays.toString(transactions) + "]";
+        return "Block [transactions = " + Arrays.toString(transactions) + ", blockhash = " + blockHash + 
+            ", previousBlockHash = "+ previousBlockHash + "]";
     }
 
     public String[] getTransactions() {
