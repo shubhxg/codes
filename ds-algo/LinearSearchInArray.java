@@ -4,7 +4,7 @@ import java.util.Arrays;
 public class LinearSearchInArray {
     public static void main(String[] args) {
         int[] arr = new int[5];
-
+        
         // calling function for input
         int element = getElements(arr, arr.length);
         System.out.println(Arrays.toString(arr));
@@ -17,18 +17,17 @@ public class LinearSearchInArray {
     private static int linearSearch(int[] arr, int length, int element) {
 
         // if no element in array
-        if (arr.length == 0) {
-            return -1;
-        }
+        if (arr.length == 0) 
+            return Integer.MIN_VALUE;
 
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == element) {
-                return i + 1;
-            }
+            // comparing elements
+            if (arr[i] == element) 
+                return i;
         }
 
         // if not found then
-        return -1;
+        return Integer.MIN_VALUE;
     }
 
     private static int getElements(int[] arr, int l) {
