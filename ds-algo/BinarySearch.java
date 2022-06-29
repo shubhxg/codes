@@ -19,7 +19,8 @@ class BinarySearch {
             // target is at mid position
             else return mid;
         }
-
+        
+        // not found 
         return -1;
     }
 }
