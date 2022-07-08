@@ -1,7 +1,7 @@
 public class FindCeilingUsingBS {
     public static void main(String[] args) {
         int[] arr = { 1, 4, 6, 7, 9, 12, 14 };
-        int target = 16; // >=target
+        int target = 5; // >=target which is 6
         System.out.println(ceilingFind(arr, target));
     }
 
