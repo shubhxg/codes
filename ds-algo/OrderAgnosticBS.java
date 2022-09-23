@@ -14,18 +14,18 @@ public class OrderAgnosticBS {
         while (s <= e) {
             int mid = s + (e - s) / 2;
 
-            // if element found at mid returns the index
+            // if element found at mid return the index
             if (arr[mid] == target)
                 return mid;
 
             if (isAsc) {
-                // array is ascending order sorted
+                // array is in ascending order 
                 if (target < arr[mid])
                     e = mid - 1;
                 else
                     s = mid + 1;
             } else {
-                // array is descending order sorted
+                // array is in descending order 
                 if (target > arr[mid])
                     e = mid - 1;
                 else
