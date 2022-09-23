@@ -1,0 +1,22 @@
+public class LettersCeilingTarget {
+    public static void main(String[] args) {
+        char letters[] = {'c', 'd', 'h', 's','t','x'};
+        char target = 'x'; // will return 0 
+        System.out.println(nextGreatestLetter(letters, target));
+    }
+
+   public char nextGreatestLetter(char[] letters, char target) {
+        int mid, start = 0, end = letters.length - 1;
+      
+        while (start <= end) {
+            mid = start + (end - start) / 2;
+        
+            if (target < letters[mid]) 
+                end = mid - 1;
+            else 
+            start = mid + 1;
+        }
+//         returning the starting character
+        return letters[start % letters.length];
+  }
+}
