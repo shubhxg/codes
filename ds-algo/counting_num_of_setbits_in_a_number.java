@@ -15,3 +15,16 @@ class BitMan {
         System.out.println(count); //3
     }
 }
+//second method is - 
+class BitMan2 {
+    public static void main(String[] args) {
+        int n = 13; //1101
+        int counter = 0;
+        
+        while(n!=0){
+            n = n&(n-1); //better version
+            counter++;
+        }
+        System.out.println(count); //3
+    }
+}
